@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <% 
+        if(messages.error){
+          %>
+            <h3 style ="color: red; text-align:center;">
+              <%= messages.error %>
+            </h3>
+          <%
+        }
+      %>
+    <div class="form-container">
+      
+      <form action="/store" method="POST" >
+
+        <h1 style ="text-align: center;"> ADD Course </h1>
+     
+        <div>
+          <label for=""> Name </label>
+          <input type="text" name="name" value= "<%= name %>">
+        </div>
+        <div>
+          <label for=""> Thumnail </label>
+          <input type="text" name="thumnail" value = "<%= thumnail%>">
+        </div>
+        
+        <div>
+          <label for=" "> id_author</label>
+          <input type="text" name="Idauthor" value= "<%= Idauthor%> ">
+        </div>
+        <div>
+          <label for=""> Duration </label>
+          <input type="time" name="duration" value= "<%= duration%> " >
+        </div>
+        <div>
+          <label for=" "> Description</label>
+          <textarea name="description" id="" cols="30" rows="10" value= "<%= description%> " ></textarea>
+        </div>
+        <br>
+        <br>
+        <div>
+          <button class="btn-primary "> Simpan Data </button>
+        </div>
+      </form>
+      </div>
+      
+  </body>
+</html>
